@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dynamic Background & Foreground */
+  --background: #FDFBF7; /* Warm Ivory/Cream */
+  --foreground: #1C1917; /* Dark Charcoal */
+
+  /* Palette Warna Pernikahan Bali */
+  --color-bali-gold: #C5A059;   /* Primary Accent / Prada Emas */
+  --color-bali-bronze: #4A2E12; /* Secondary Accent / Ukiran Cokelat */
+  --color-bali-cream: #FDFBF7;  /* Neutral Light / Ivory */
+  --color-bali-sand: #F3EEE5;   /* Neutral Light Soft / Sand Beige */
+  --color-bali-dark: #1C1917;   /* Neutral Dark / Charcoal */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Mapping Warna ke Class Tailwind (contoh: bg-bali-gold, text-bali-bronze) */
+  --color-bali-gold: var(--color-bali-gold);
+  --color-bali-bronze: var(--color-bali-bronze);
+  --color-bali-cream: var(--color-bali-cream);
+  --color-bali-sand: var(--color-bali-sand);
+  --color-bali-dark: var(--color-bali-dark);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Mapping Font Family dari CSS Variable Next.js Font */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui;
+  --font-serif: var(--font-serif), ui-serif, Georgia;
+  --font-script: var(--font-script), cursive;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
+/* Custom Animation Keyframes & Classes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.35), 0 0 30px rgba(197, 160, 89, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.65), 0 0 45px rgba(197, 160, 89, 0.35);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+
+.animate-zoom-slow {
+  animation: zoomSlow 20s ease-out infinite alternate;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Stagger Animation Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
