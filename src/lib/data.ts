@@ -3,7 +3,7 @@ import { WeddingData } from "@/types";
 export const weddingData: WeddingData = {
   // ─── Cover Page ────────────────────────────────────────────────────────────
   cover: {
-    bgImage: "/images/edit/004.JPG",
+    bgImage: "/images/edit/004.jpg",
     subtitle: "Undangan Pernikahan",
     title: "Calvine & Angel",
     cardLabel: "Kepada Bapak/Ibu/Saudara/i",
@@ -15,9 +15,9 @@ export const weddingData: WeddingData = {
   // ─── Hero Section ──────────────────────────────────────────────────────────
   hero: {
     bgImages: [
-      "/images/edit/004.JPG",
-      "/images/edit/013.JPG",
-      "/images/edit/019.JPG",
+      "/images/edit/004.jpg",
+      "/images/edit/013.jpg",
+      "/images/edit/019.jpg",
     ],
     subtitle: "Undangan Pernikahan",
     title: "Calvine & Angel",
@@ -46,7 +46,7 @@ export const weddingData: WeddingData = {
       fatherName: "I Wayan Adnyana",
       motherName: "Ni Kadek Santi Asih (alm)",
       address: "Br. Danginpeken, Sanur, Denpasar Selatan, Denpasar",
-      photo: "/images/edit/016.JPG",
+      photo: "/images/edit/016.jpg",
     },
     bride: {
       label: "Mempelai Wanita",
@@ -56,7 +56,7 @@ export const weddingData: WeddingData = {
       fatherName: "I Made Gede Sumantra",
       motherName: "Luh Arsining",
       address: "Br. Gulingan, Sanur, Denpasar Selatan, Denpasar",
-      photo: "/images/edit/017.JPG",
+      photo: "/images/edit/017.jpg",
     },
   },
 
