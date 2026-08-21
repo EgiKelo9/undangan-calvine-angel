@@ -18,12 +18,12 @@ export default function EventCard({ title, date, timeStart, timeEnd, location }:
             {timeStart} – {timeEnd} WITA
           </span>
         </div>
-        <div className="flex items-start gap-2 text-sm sm:text-base font-sans">
+        {/* <div className="flex items-start gap-2 text-sm sm:text-base font-sans">
           <MapPin className="w-4 h-4 text-bali-gold shrink-0 mt-0.5" />
           <span className="text-foreground/90 text-xs md:text-sm">
             {location}
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

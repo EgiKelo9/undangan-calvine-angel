@@ -61,7 +61,7 @@ export default function FooterSection() {
         </div>
 
         {/* Karsaa - Digital Invitation */}
-        <div className="flex items-center justify-center gap-2 text-bali-sand font-serif text-sm sm:text-base md:text-lg font-semibold tracking-wide">
+        <div className="flex items-center justify-center gap-2 text-bali-sand font-serif text-base sm:text-lg md:text-xl font-semibold tracking-wide">
           <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-bali-gold shrink-0" />
           <span>
             {footer.brandName} - {footer.brandTagline}
@@ -69,7 +69,7 @@ export default function FooterSection() {
         </div>
 
         {/* Social media */}
-        <div className="flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3.5 gap-y-1.5 text-xs sm:text-sm font-sans text-bali-sand/80">
+        {/* <div className="flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3.5 gap-y-1.5 text-xs sm:text-sm font-sans text-bali-sand/80">
           <a href="https://www.instagram.com/aryadanabaraja" className="flex items-center gap-1.5">
             <InstagramIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-bali-gold shrink-0" />
             <span>{footer.instagram}</span>
@@ -88,11 +88,11 @@ export default function FooterSection() {
             <WhatsAppIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-bali-gold shrink-0" />
             <span>{footer.whatsapp}</span>
           </a>
-        </div>
+        </div> */}
 
         {/* Copyright */}
-        <p className="text-[11px] sm:text-xs font-sans text-bali-sand/50 tracking-wider">
-          &copy; {footer.year} - Designed by {footer.designer}
+        <p className="text-xs sm:text-sm font-sans text-bali-sand/50 tracking-wider">
+          &copy; {footer.year} - Created by {footer.designer}
         </p>
       </div>
     </footer>

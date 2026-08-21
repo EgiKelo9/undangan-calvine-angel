@@ -150,16 +150,16 @@ export default function PersonSection() {
                   />
                 </div>
               </div>
-              <p className="flex flex-col gap-1 md:gap-2 items-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold text-bali-bronze drop-shadow-sm border-b border-bali-gold/50 pb-8">
+              <p className="flex flex-col gap-1 md:gap-2 items-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold text-bali-bronze drop-shadow-sm">
                 {mepandes.participants.map((person) => (
                   <span key={person}>{person}</span>
                 ))}
               </p>
-              <p className="flex flex-col gap-1 items-center text-sm sm:text-base lg:text-lg font-sans drop-shadow-sm">
+              {/* <p className="flex flex-col gap-1 items-center text-sm sm:text-base lg:text-lg font-sans drop-shadow-sm">
                 <span className="font-light text-foreground">{mepandes.relationLabel}</span>
                 <span className="font-semibold text-bali-bronze">{mepandes.parents.father}</span>
                 <span className="font-semibold text-bali-bronze">{mepandes.parents.mother}</span>
-              </p>
+              </p> */}
             </div>
           </ScrollReveal>
         </div>
