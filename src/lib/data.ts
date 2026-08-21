@@ -3,7 +3,7 @@ import { WeddingData } from "@/types";
 export const weddingData: WeddingData = {
   // ─── Cover Page ────────────────────────────────────────────────────────────
   cover: {
-    bgImage: "/images/edit/004.jpg",
+    bgImage: "/images/edit/019.jpg",
     subtitle: "Undangan Pernikahan",
     title: "Calvine & Angel",
     cardLabel: "Kepada Bapak/Ibu/Saudara/i",
@@ -15,8 +15,8 @@ export const weddingData: WeddingData = {
   // ─── Hero Section ──────────────────────────────────────────────────────────
   hero: {
     bgImages: [
-      "/images/edit/004.jpg",
-      "/images/edit/013.jpg",
+      "/images/edit/012.jpg",
+      "/images/edit/002.jpg",
       "/images/edit/019.jpg",
     ],
     subtitle: "Undangan Pernikahan",
@@ -97,14 +97,14 @@ export const weddingData: WeddingData = {
       mapsLink: "https://maps.app.goo.gl/3QKzEUpWUtMW4DYc9",
     },
     leftSchedule: {
-      title: "Puncak Acara",
+      title: "Prosesi Upacara",
       date: "Jumat, 09 Oktober 2026",
       timeStart: "08.00",
       timeEnd: "11.00",
       // location: "Nama Venue Puncak Acara",
     },
     rightSchedule: {
-      title: "Resepsi Acara",
+      title: "Resepsi",
       date: "Jumat, 09 Oktober 2026",
       timeStart: "16.00",
       timeEnd: "21.00",
@@ -131,8 +131,6 @@ export const weddingData: WeddingData = {
       { src: "/images/edit/013.jpg", alt: "Momen Bahagia 13" },
       { src: "/images/edit/014.jpg", alt: "Momen Bahagia 14" },
       { src: "/images/edit/015.jpg", alt: "Momen Bahagia 15" },
-      { src: "/images/edit/016.jpg", alt: "Momen Bahagia 16" },
-      { src: "/images/edit/017.jpg", alt: "Momen Bahagia 17" },
       { src: "/images/edit/018.jpg", alt: "Momen Bahagia 18" },
       { src: "/images/edit/019.jpg", alt: "Momen Bahagia 19" },
       { src: "/images/edit/020.jpg", alt: "Momen Bahagia 20" },
