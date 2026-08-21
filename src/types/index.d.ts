@@ -49,8 +49,8 @@ export interface CoupleDetails {
 export interface MepandesDetails {
   title: string;
   participants: string[];
-  relationLabel: string;
-  parents: {
+  relationLabel?: string;
+  parents?: {
     father: string;
     mother: string;
   };
@@ -75,7 +75,7 @@ export interface EventSchedule {
   date: string;
   timeStart: string;
   timeEnd: string;
-  location: string;
+  location?: string;
 }
 
 export interface EventSectionDetails {
@@ -131,9 +131,16 @@ export interface FooterConfig {
   brandTagline: string;
   designer: string;
   year: number;
-  instagram: string;
-  tiktok: string;
-  whatsapp: string;
+  instagram?: string;
+  tiktok?: string;
+  whatsapp?: string;
+}
+
+// ─── Audio Config ─────────────────────────────────────────────────────────────
+export interface AudioConfig {
+  src: string;
+  title?: string;
+  artist?: string;
 }
 
 // ─── Ornaments (shared across sections) ──────────────────────────────────────
@@ -160,5 +167,6 @@ export interface WeddingData {
   rsvp: RsvpSectionConfig;
   footer: FooterConfig;
   ornaments: OrnamentsConfig;
+  audio: AudioConfig;
 }
 

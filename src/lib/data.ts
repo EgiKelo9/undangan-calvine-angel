@@ -3,7 +3,7 @@ import { WeddingData } from "@/types";
 export const weddingData: WeddingData = {
   // ─── Cover Page ────────────────────────────────────────────────────────────
   cover: {
-    bgImage: "/images/background.jpg",
+    bgImage: "/images/edit/004.JPG",
     subtitle: "Undangan Pernikahan",
     title: "Calvine & Angel",
     cardLabel: "Kepada Bapak/Ibu/Saudara/i",
@@ -15,9 +15,9 @@ export const weddingData: WeddingData = {
   // ─── Hero Section ──────────────────────────────────────────────────────────
   hero: {
     bgImages: [
-      "/images/background-1.jpg",
-      "/images/background-2.jpg",
-      "/images/background-3.jpg",
+      "/images/edit/004.JPG",
+      "/images/edit/013.JPG",
+      "/images/edit/019.JPG",
     ],
     subtitle: "Undangan Pernikahan",
     title: "Calvine & Angel",
@@ -40,39 +40,39 @@ export const weddingData: WeddingData = {
     weddingDate: "09 Oktober 2026",
     groom: {
       label: "Mempelai Pria",
-      fullName: "Nama Lengkap Calvine",
+      fullName: "I Wayan Calvine Radhitya Adnyana",
       nickName: "Calvine",
       childRelation: "Putra pertama dari pasangan:",
-      fatherName: "Nama Ayah Calvine",
-      motherName: "Alm. Nama Ibu Calvine",
+      fatherName: "I Wayan Adnyana",
+      motherName: "Ni Kadek Santi Asih (alm)",
       address: "Br. Danginpeken, Sanur, Denpasar Selatan, Denpasar",
-      photo: "/images/groom.jpg",
+      photo: "/images/edit/016.JPG",
     },
     bride: {
       label: "Mempelai Wanita",
-      fullName: "Ni Luh Putu Yudhani Angelina Putri, S.Tr.Gz.",
+      fullName: "Ni Luh Putu Yudhani Angelina Putri",
       nickName: "Angel",
       childRelation: "Putri pertama dari pasangan:",
-      fatherName: "I Made Gede Sumantra, S.S.",
+      fatherName: "I Made Gede Sumantra",
       motherName: "Luh Arsining",
       address: "Br. Gulingan, Sanur, Denpasar Selatan, Denpasar",
-      photo: "/images/bride.jpg",
+      photo: "/images/edit/017.JPG",
     },
   },
 
   mepandes: {
     title: "Mepandes",
     participants: [
-      "Nama Lengkap Metatah 1",
-      "Nama Lengkap Metatah 2",
-      "Nama Lengkap Metatah 3",
-      "Nama Lengkap Metatah 4",
+      "I Wayan Calvine Radhitya Adnyana",
+      "I Kadek Andrea Surya Pramesta Adnyana",
+      "I Made Adi Arthanaya",
+      "Gangga Dewidhasi Aryawan",
     ],
-    relationLabel: "Putra-putri dari pasangan:",
-    parents: {
-      father: "I Made Gede Sumantra, S.S.",
-      mother: "Luh Arsining",
-    },
+    // relationLabel: "Putra-putri dari pasangan:",
+    // parents: {
+    //   father: "I Made Gede Sumantra, S.S.",
+    //   mother: "Luh Arsining",
+    // },
   },
 
   // ─── Quote Section ─────────────────────────────────────────────────────────
@@ -91,24 +91,24 @@ export const weddingData: WeddingData = {
       "Dengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir menyaksikan dan memberikan doa restu pada rangkaian acara kami.",
     venue: {
       address: 
-        "Jl. Kutat Lestari No.5, Sanur Kauh, Denpasar Selatan, Kota Denpasar, Bali 80228",
+        "Jl. Batur Sari Gg. II No. 2, Sanur Kauh, Denpasar Selatan, Kota Denpasar, Bali 80227",
       mapsEmbedUrl: 
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d426.099354182526!2d115.25325920864229!3d-8.698908498544148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241b9756ba1a1%3A0xf6225340e60a5fa7!2sUtami%20Dewi%20Hair%20n%20Beauty%20Care%202!5e0!3m2!1sid!2sid!4v1786538566242!5m2!1sid!2sid",
-      mapsLink: "https://maps.app.goo.gl/D5FyxemNPW6LrAxX7",
+        "https://www.google.com/maps/embed?pb=!3m2!1sid!2sid!4v1787234666453!5m2!1sid!2sid!6m8!1m7!1sVDotsi2w3jxF0xVVTXDDhQ!2m2!1d-8.684730573793496!2d115.2525975509153!3f2.658887865299448!4f-12.720170131248608!5f0.7820865974627469",
+      mapsLink: "https://maps.app.goo.gl/3QKzEUpWUtMW4DYc9",
     },
     leftSchedule: {
       title: "Puncak Acara",
       date: "Jumat, 09 Oktober 2026",
       timeStart: "08.00",
       timeEnd: "11.00",
-      location: "Nama Venue Puncak Acara",
+      // location: "Nama Venue Puncak Acara",
     },
     rightSchedule: {
       title: "Resepsi Acara",
       date: "Jumat, 09 Oktober 2026",
       timeStart: "16.00",
       timeEnd: "21.00",
-      location: "Nama Venue Resepsi",
+      // location: "Nama Venue Resepsi",
     },
   },
 
@@ -116,18 +116,26 @@ export const weddingData: WeddingData = {
   gallery: {
     title: "Momen Bahagia",
     items: [
-      { src: "/images/gallery-1.jpg", alt: "Momen Bahagia 1" },
-      { src: "/images/gallery-2.jpg", alt: "Momen Bahagia 2" },
-      { src: "/images/gallery-3.jpg", alt: "Momen Bahagia 3" },
-      { src: "/images/gallery-4.jpg", alt: "Momen Bahagia 4" },
-      { src: "/images/gallery-5.jpg", alt: "Momen Bahagia 5" },
-      { src: "/images/gallery-6.jpg", alt: "Momen Bahagia 6" },
-      { src: "/images/gallery-7.jpg", alt: "Momen Bahagia 7" },
-      { src: "/images/gallery-8.jpg", alt: "Momen Bahagia 8" },
-      { src: "/images/gallery-9.jpg", alt: "Momen Bahagia 9" },
-      { src: "/images/gallery-10.jpg", alt: "Momen Bahagia 10" },
-      { src: "/images/gallery-11.jpg", alt: "Momen Bahagia 11" },
-      { src: "/images/gallery-12.jpg", alt: "Momen Bahagia 12" },
+      { src: "/images/edit/001.jpg", alt: "Momen Bahagia 1" },
+      { src: "/images/edit/002.jpg", alt: "Momen Bahagia 2" },
+      { src: "/images/edit/003.jpg", alt: "Momen Bahagia 3" },
+      { src: "/images/edit/004.jpg", alt: "Momen Bahagia 4" },
+      { src: "/images/edit/005.jpg", alt: "Momen Bahagia 5" },
+      { src: "/images/edit/006.jpg", alt: "Momen Bahagia 6" },
+      { src: "/images/edit/007.jpg", alt: "Momen Bahagia 7" },
+      { src: "/images/edit/008.jpg", alt: "Momen Bahagia 8" },
+      { src: "/images/edit/009.jpg", alt: "Momen Bahagia 9" },
+      { src: "/images/edit/010.jpg", alt: "Momen Bahagia 10" },
+      { src: "/images/edit/011.jpg", alt: "Momen Bahagia 11" },
+      { src: "/images/edit/012.jpg", alt: "Momen Bahagia 12" },
+      { src: "/images/edit/013.jpg", alt: "Momen Bahagia 13" },
+      { src: "/images/edit/014.jpg", alt: "Momen Bahagia 14" },
+      { src: "/images/edit/015.jpg", alt: "Momen Bahagia 15" },
+      { src: "/images/edit/016.jpg", alt: "Momen Bahagia 16" },
+      { src: "/images/edit/017.jpg", alt: "Momen Bahagia 17" },
+      { src: "/images/edit/018.jpg", alt: "Momen Bahagia 18" },
+      { src: "/images/edit/019.jpg", alt: "Momen Bahagia 19" },
+      { src: "/images/edit/020.jpg", alt: "Momen Bahagia 20" },
     ],
   },
 
@@ -143,9 +151,9 @@ export const weddingData: WeddingData = {
         accountName: "Nama Penerima BCA",
       },
       {
-        bank: "BNI",
-        accountNumber: "0987654321",
-        accountName: "Nama Penerima BNI",
+        bank: "Bank Mandiri",
+        accountNumber: "1750003491676",
+        accountName: "NI LUH PUTU YUDHANI",
       },
     ],
   },
@@ -160,13 +168,13 @@ export const weddingData: WeddingData = {
 
   // ─── Footer Section ────────────────────────────────────────────────────────
   footer: {
-    brandName: "Karsaa",
-    brandTagline: "Digital Invitation",
+    brandName: "Pawiwahan",
+    brandTagline: "Calvine & Angel",
     designer: "Aryadana Baraja Putra",
-    year: 2026,
-    instagram: "@karsaa.id",
-    tiktok: "@karsaa.id",
-    whatsapp: "+62 897-7289-923",
+    year: new Date().getFullYear(),
+    // instagram: "@karsaa.id",
+    // tiktok: "@karsaa.id",
+    // whatsapp: "+62 897-7289-923",
   },
 
   // ─── Ornaments ─────────────────────────────────────────────────────────────
@@ -177,5 +185,11 @@ export const weddingData: WeddingData = {
     balineseHeader4: "/assets/balinese-header-4.svg",
     floralBackground: "/assets/floral-background.svg",
   },
-};
 
+  // ─── Audio ─────────────────────────────────────────────────────────────────
+  audio: {
+    src: "/audio/asmalibrasi.mp3",
+    title: "Asmalibrasi",
+    artist: "Soegi Bornean",
+  },
+};
