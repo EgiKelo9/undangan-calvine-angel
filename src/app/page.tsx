@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Cover from "./pages/cover";
 import Main from "./pages/main";
+import AudioPlayer from "@/components/AudioPlayer";
 import { useSearchParams } from "next/navigation";
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
     )
   }
   return (
-    <Main />
+    <>
+      <Main />
+      <AudioPlayer autoPlayTrigger={opened} />
+    </>
   );
 }
