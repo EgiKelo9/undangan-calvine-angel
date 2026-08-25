@@ -170,3 +170,14 @@ export interface WeddingData {
   audio: AudioConfig;
 }
 
+// ─── Guest List (Admin) ───────────────────────────────────────────────────────
+export interface Guest {
+  id: string;
+  name: string;
+  phone: string;
+  createdAt: string;
+}
+
+export interface AdminConfig {
+  messageTemplate: string;
+}
