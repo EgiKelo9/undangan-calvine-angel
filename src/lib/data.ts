@@ -40,7 +40,7 @@ export const weddingData: WeddingData = {
     weddingDate: "09 Oktober 2026",
     groom: {
       label: "Mempelai Pria",
-      fullName: "I Wayan Calvine Radhitya Adnyana",
+      fullName: "I Wayan Calvine Radhitya Adnyana, S.M.",
       nickName: "Calvine",
       childRelation: "Putra pertama dari pasangan:",
       fatherName: "I Wayan Adnyana",
@@ -50,7 +50,7 @@ export const weddingData: WeddingData = {
     },
     bride: {
       label: "Mempelai Wanita",
-      fullName: "Ni Luh Putu Yudhani Angelina Putri",
+      fullName: "Ni Luh Putu Yudhani Angelina Putri, S.Tr.Gz.",
       nickName: "Angel",
       childRelation: "Putri pertama dari pasangan:",
       fatherName: "I Made Gede Sumantra",
@@ -63,7 +63,7 @@ export const weddingData: WeddingData = {
   mepandes: {
     title: "Mepandes",
     participants: [
-      "I Wayan Calvine Radhitya Adnyana",
+      "I Wayan Calvine Radhitya Adnyana, S.M.",
       "I Kadek Andrea Surya Pramesta Adnyana",
       "I Made Adi Arthanaya",
       "Gangga Dewidhasi Aryawan",
@@ -144,13 +144,13 @@ export const weddingData: WeddingData = {
       "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda terima kasih Anda, kami dengan rendah hati menerima melalui rekening berikut:",
     accounts: [
       {
-        bank: "BCA",
+        bank: "Bank BCA",
         accountNumber: "1234567890",
         accountName: "Nama Penerima BCA",
       },
       {
-        bank: "Bank Mandiri",
-        accountNumber: "1750003491676",
+        bank: "Bank BRI",
+        accountNumber: "1234567890",
         accountName: "NI LUH PUTU YUDHANI",
       },
     ],
