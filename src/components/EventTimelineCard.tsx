@@ -34,7 +34,7 @@ export default function EventTimelineCard({
         <div className="absolute left-1/2 top-1 bottom-1 w-px -translate-x-1/2 bg-bali-gold/30" />
 
         {/* Kolom Kiri: leftSchedule */}
-        <div className="flex flex-col gap-3 items-center px-2">
+        <div className="flex flex-col gap-3 items-center px-1">
           <h4 className="text-xl sm:text-2xl font-serif font-semibold text-bali-bronze drop-shadow-sm">
             {leftSchedule?.title || "Prosesi"}
           </h4>
@@ -54,7 +54,7 @@ export default function EventTimelineCard({
         </div>
 
         {/* Kolom Kanan: rightSchedule */}
-        <div className="flex flex-col gap-3 items-center px-2">
+        <div className="flex flex-col gap-3 items-center px-1">
           <h4 className="text-xl sm:text-2xl font-serif font-semibold text-bali-bronze drop-shadow-sm">
             {rightSchedule?.title || "Resepsi"}
           </h4>
