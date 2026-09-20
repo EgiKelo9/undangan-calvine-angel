@@ -86,6 +86,23 @@ export interface EventSectionDetails {
   rightSchedule: EventSchedule;
 }
 
+export interface EventTimelineItem {
+  title: string;
+  time?: string;
+  timeStart?: string;
+  timeEnd?: string;
+  timezone?: string;
+  location?: string;
+}
+
+export interface EventTimelineCardProps {
+  date?: string;
+  leftSchedule?: EventSchedule;
+  rightSchedule?: EventSchedule;
+  items?: EventTimelineItem[];
+  className?: string;
+}
+
 // ─── Gallery Section ──────────────────────────────────────────────────────────
 export interface GalleryItem {
   src: string;

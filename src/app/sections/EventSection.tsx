@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import EventCard from "@/components/EventCard";
+// import EventCard from "@/components/EventCard";
+import EventTimelineCard from "@/components/EventTimelineCard";
 import { weddingData } from "@/lib/data";
 
 export default function EventSection() {
@@ -82,12 +83,23 @@ export default function EventSection() {
           </div>
         </ScrollReveal>
 
-        {/* Event Cards */}
+        {/* Konfigurasi Sebelumnya: Event Cards Grid (Di-comment sesuai instruksi) */}
+        {/* 
         <ScrollReveal animation="fade-in-up" delay={400} className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full">
             <EventCard {...leftSchedule} />
             <EventCard {...rightSchedule} />
           </div>
+        </ScrollReveal>
+        */}
+
+        {/* Konfigurasi Baru: EventTimelineCard (Format 2 Kolom Bersisian) */}
+        <ScrollReveal animation="fade-in-up" delay={400} className="w-full">
+          <EventTimelineCard
+            date={leftSchedule.date || "Jumat, 09 Oktober 2026"}
+            leftSchedule={leftSchedule}
+            rightSchedule={rightSchedule}
+          />
         </ScrollReveal>
       </div>
     </section>
