@@ -26,12 +26,12 @@ export default function BankCard({ bank, accountNumber, accountName }: BankAccou
   return (
     <div className="flex flex-col items-center gap-4 w-full bg-white/50 backdrop-blur-md border border-bali-gold/30 rounded-2xl p-6 sm:p-8 shadow-lg hover:border-bali-gold/55 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
       {/* Bank Name */}
-      <p className="text-sm font-sans font-bold tracking-[0.2em] uppercase text-bali-bronze/70">
+      <p className="text-xs lg:text-sm font-sans font-bold tracking-widest uppercase text-bali-bronze/70">
         {bank}
       </p>
 
       {/* Account Number */}
-      <p className="text-xl sm:text-2xl font-mono font-bold text-bali-dark tracking-widest">
+      <p className="text-lg sm:text-xl lg:text-2xl font-mono font-bold text-bali-dark tracking-wide">
         {accountNumber}
       </p>
 
