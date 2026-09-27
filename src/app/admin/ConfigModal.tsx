@@ -4,22 +4,29 @@ import { useEffect, useState } from "react";
 import { X, Settings } from "lucide-react";
 import { AdminConfig } from "@/types";
 
-const STORAGE_KEY = "admin_config_calvine_angel";
+const OLD_STORAGE_KEY = "admin_config_calvine_angel";
+const NEW_STORAGE_KEY = "msg_template_calvine_angel";
 
 const DEFAULT_CONFIG: AdminConfig = {
-  messageTemplate: `Halo {nama} 🙏
+  messageTemplate: `Om Swastyastu,
+Yth. Bapak/Ibu/Saudara/i {nama}
 
-Dengan bahagia, kami mengundang Anda untuk hadir dan merayakan hari bahagia kami:
+Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa (Tuhan Yang Maha Esa), kami bermaksud menyelenggarakan acara pernikahan kami:
+
+Calvine & Angel
 
 📅 Jumat, 09 Oktober 2026
-📍 Sanur, Denpasar, Bali
+📍 Jl. Batur Sari Gg. II No. 2, Sanur Kauh, Denpasar
 
-Buka undangan Anda di sini:
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.
+
+Detail rangkaian acara dan lokasi dapat diakses melalui tautan undangan digital kami:
 {link}
 
-Kehadiran dan doa restu Anda sangat berarti bagi kami. 🤍
+Atas kehadiran dan doa restunya, kami ucapkan terima kasih yang tulus.
+Om Shanti, Shanti, Shanti, Om
 
-Love,
+Salam hangat penuh syukur,
 Calvine & Angel`,
 };
 
@@ -28,8 +35,11 @@ export function useAdminConfig() {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setConfig(JSON.parse(stored));
+      const oldStored = localStorage.getItem(OLD_STORAGE_KEY);
+      if (oldStored) localStorage.removeItem(OLD_STORAGE_KEY);
+
+      const newStored = localStorage.getItem(NEW_STORAGE_KEY);
+      if (newStored) setConfig(JSON.parse(newStored));
     } catch {
       // ignore parse error
     }
@@ -37,7 +47,7 @@ export function useAdminConfig() {
 
   const saveConfig = (newConfig: AdminConfig) => {
     setConfig(newConfig);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(newConfig));
+    localStorage.setItem(NEW_STORAGE_KEY, JSON.stringify(newConfig));
   };
 
   return { config, saveConfig };

@@ -26,17 +26,50 @@ function generateLink(name: string): string {
   return `${BASE_URL}/?to=${encodeURIComponent(name)}`;
 }
 
+function buildMessageText(template: string, name: string, link: string): string {
+  return (template || "")
+    .replace(/\{nama\}/g, String(name || ""))
+    .replace(/\{link\}/g, String(link || ""));
+}
+
 function buildWhatsAppUrl(
   phone: string | number,
   template: string,
   name: string,
   link: string
 ): string {
-  const text = (template || "")
-    .replace(/\{nama\}/g, String(name || ""))
-    .replace(/\{link\}/g, String(link || ""));
+  const text = buildMessageText(template, name, link);
   const cleanPhone = String(phone || "").replace(/\D/g, "");
   return `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(text)}`;
+}
+
+async function copyToClipboard(text: string): Promise<boolean> {
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // fallback jika clipboard API gagal
+    }
+  }
+  if (typeof document !== "undefined") {
+    try {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      textArea.style.top = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      const successful = document.execCommand("copy");
+      document.body.removeChild(textArea);
+      return successful;
+    } catch {
+      return false;
+    }
+  }
+  return false;
 }
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
@@ -90,7 +123,16 @@ export default function GuestListClient({ adminKey }: GuestListClientProps) {
       const res = await fetch(`/api/guests?key=${adminKey}`);
       const json = await res.json();
       if (json.success) {
-        setGuests(json.data);
+        const sorted = Array.isArray(json.data)
+          ? [...json.data].sort((a, b) => {
+              const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+              const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+              const validA = Number.isNaN(timeA) ? 0 : timeA;
+              const validB = Number.isNaN(timeB) ? 0 : timeB;
+              return validA - validB;
+            })
+          : [];
+        setGuests(sorted);
       } else {
         setError(json.error ?? "Gagal memuat data.");
       }
@@ -174,12 +216,17 @@ export default function GuestListClient({ adminKey }: GuestListClientProps) {
     }
   };
 
-  const handleCopyLink = async (name: string, id: string) => {
-    const link = generateLink(name);
-    await navigator.clipboard.writeText(link);
-    setCopiedId(id);
-    showToast("Link berhasil disalin!");
-    setTimeout(() => setCopiedId(null), 2000);
+  const handleCopyMessage = async (guest: Guest) => {
+    const link = generateLink(guest.name);
+    const message = buildMessageText(config.messageTemplate, guest.name, link);
+    const ok = await copyToClipboard(message);
+    if (ok) {
+      setCopiedId(guest.id);
+      showToast("Pesan undangan berhasil disalin!");
+      setTimeout(() => setCopiedId(null), 2000);
+    } else {
+      showToast("Gagal menyalin pesan.", "error");
+    }
   };
 
   const handleWhatsApp = (guest: Guest) => {
@@ -461,13 +508,13 @@ export default function GuestListClient({ adminKey }: GuestListClientProps) {
                             </ActionBtn>
                             <ActionBtn
                               id={`btn-copy-${guest.id}`}
-                              onClick={() => handleCopyLink(guest.name, guest.id)}
+                              onClick={() => handleCopyMessage(guest)}
                               disabled={!guest.name}
-                              title="Salin link undangan"
+                              title="Salin pesan undangan"
                               color={copiedId === guest.id ? "#16a34a" : "rgba(28, 25, 23, 0.6)"}
                               hoverBg="rgba(197, 160, 89, 0.15)"
                             >
-                              <Copy size={13} />
+                              {copiedId === guest.id ? <Check size={13} /> : <Copy size={13} />}
                             </ActionBtn>
                             <ActionBtn
                               id={`btn-wa-${guest.id}`}

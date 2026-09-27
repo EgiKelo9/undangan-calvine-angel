@@ -33,7 +33,7 @@ function generateId_() {
  * Menghasilkan URL Invitation berdasarkan nama
  */
 function generateUrl_(name) {
-  return "https://undangan-calvine-angel.vercel.app/to?" + encodeURIComponent(name);
+  return "https://undangan-calvine-angel.vercel.app?to=" + encodeURIComponent(name);
 }
 
 /**
