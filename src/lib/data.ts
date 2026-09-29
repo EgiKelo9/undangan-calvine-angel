@@ -26,7 +26,7 @@ export const weddingData: WeddingData = {
   },
 
   countdown: {
-    isoDate: "2026-10-09T08:00:00+08:00",
+    isoDate: "2026-10-09T10:00:00+08:00",
   },
 
   // ─── Person Section ────────────────────────────────────────────────────────
